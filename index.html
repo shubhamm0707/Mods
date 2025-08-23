@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>GT5 Mods</title>
-    <meta name="description" content="Welcome to GT5 mods - Grand Theft Auto V player models and other mods and files">
-    <meta name="keywords" content="gt5mods, GT5 mods, Grand Theft V, gt5 menu">
+    <title>ITA Mods</title>
+    <meta name="description" content="Welcome to ITA mods - Indian theft auto player models and other mods and files">
+    <meta name="keywords" content="itamods, ITA mods, Indian theft auto, ita menu">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
@@ -16,49 +16,37 @@
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
-            background: linear-gradient(to right, #e3f2fd, #bbdefb);
+            background: #f7f7f7;
             margin: 0;
             font-size: 16px;
             line-height: 1.6;
-            color: #333;
         }
 
         .title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
             color: #fff;
-            background-color: #2196f3;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            background-color: #28a745;
         }
 
         .tool-menu {
             text-align: center;
-            margin-bottom: 1rem;
+            margin-bottom: 0.5rem;
             padding: 0.5rem;
-            background-color: #e3f2fd;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
         }
 
         .tool-menu button {
             margin: 0.5rem;
-            padding: 0.7rem 1.5rem;
-            font-size: 1.2rem;
-            border: 2px solid #2196f3;
+            padding: 0.5rem 1.2rem;
+            font-size: 1.1rem;
+            border: 2px solid #28a745;
             border-radius: 8px;
-            background-color: #bbdefb;
+            background-color: #eaeaea;
             color: #292929;
-            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
-        .tool-menu button:hover {
-            background-color: #2196f3;
-            color: #fff;
-        }
 
         .model-list {
             display: grid;
@@ -69,54 +57,25 @@
         }
 
         .model-card {
-            background: #ffffff;
-            padding: 1.5rem;
+            background: white;
+            padding: 1rem;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .model-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(33, 150, 243, 0.1);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .model-card:hover::before {
-            opacity: 1;
-        }
-
-        .model-card:hover {
-            transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
         }
 
         .model-card img {
             max-width: 100%;
             border-radius: 8px;
             margin-bottom: 1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .model-card:hover img {
-            transform: scale(1.05);
         }
 
         .model-name {
             font-weight: 600;
             margin-bottom: 0.75rem;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             color: #444;
             text-align: center;
         }
@@ -126,19 +85,6 @@
             gap: 10px;
             flex-wrap: wrap;
             justify-content: center;
-            transition: opacity 0.3s ease;
-        }
-
-        .model-card:hover .button-group {
-            opacity: 1;
-        }
-
-        .button-group button {
-            transition: transform 0.3s ease;
-        }
-
-        .button-group button:hover {
-            transform: translateY(-3px);
         }
 
         button {
@@ -147,42 +93,40 @@
             border: none;
             border-radius: 8px;
             cursor: pointer;
-            transition: background 0.3s ease, transform 0.3s ease;
+            transition: background 0.3s ease;
         }
 
         .download-btn {
-            background-color: #4caf50;
+            background-color: #28a745;
+            /* Green */
             color: white;
         }
 
         .copy-btn {
-            background-color: #2196f3;
+            background-color: #007bff;
+            /* Blue */
             color: white;
         }
 
         .download-btn:hover {
-            background-color: #388e3c;
-            transform: scale(1.05);
+            background-color: #218838;
         }
 
         .copy-btn:hover {
-            background-color: #1976d2;
-            transform: scale(1.05);
+            background-color: #0056b3;
+        }
+
+        .tool-menu button:hover {
+            background-color: #218838;
         }
 
         .sendModelNameBtn {
-            background: #4caf50;
+            background: #28a745;
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .sendModelNameBtn:hover {
-            background-color: #388e3c;
-            transform: scale(1.05);
         }
 
         .closeSendModelNameMenuBtn {
@@ -193,7 +137,10 @@
             background: #e7e7e7;
             border: none;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+        }
+
+        .sendModelNameBtn:hover {
+            background-color: #218838;
         }
 
         .closeSendModelNameMenuBtn:hover {
@@ -209,7 +156,6 @@
             color: white;
             border: none;
             cursor: pointer;
-            transition: background 0.3s ease;
         }
 
         .crossBtnOnGreenBG:hover {
@@ -218,8 +164,7 @@
 
         @media (max-width: 768px) {
             .model-list {
-                grid-template-columns: 1fr;
-                /* grid-template-columns: repeat(2, 1fr); */
+                grid-template-columns: repeat(2, 1fr);
             }
         }
     </style>
@@ -228,7 +173,7 @@
 
 <body>
 
-    <h1 class="title">GT5 Custom Player Models</h1>
+    <h1 class="title">ITA Custom Player Models</h1>
 
     <div class="tool-menu">
         <button onclick="OpenRequestModelMenu()">Request Model</button>
@@ -275,48 +220,13 @@
     <div class="model-list">
 
         <div class="model-card">
-            <img loading="lazy" src="thumbnails/SpiderMan_Red.jpg" alt="SpiderMan Red">
-            <div class="model-name">SpiderMan Red</div>
-            <div class="button-group">
-                <a href="characterModels/SpiderMan_Red.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/SpiderMan_Red.fbx')">Copy
-                    Link</button>
-            </div>
-        </div>
-
-        <div class="model-card">
-            <img loading="lazy" src="thumbnails/IronMan_New.jpg" alt="IronMan New">
-            <div class="model-name">IronMan New</div>
-            <div class="button-group">
-                <a href="characterModels/IronMan_New.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/IronMan_New.fbx')">Copy Link</button>
-            </div>
-        </div>
-
-        <div class="model-card">
-            <img loading="lazy" src="thumbnails/Batman.jpg" alt="Batman">
-            <div class="model-name">Batman</div>
-            <div class="button-group">
-                <a href="characterModels/Batman.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Batman.fbx')">Copy Link</button>
-            </div>
-        </div>
-
-        <div class="model-card">
-            <img loading="lazy" src="thumbnails/Goku.jpg" alt="Goku">
-            <div class="model-name">Goku</div>
-            <div class="button-group">
-                <a href="characterModels/Goku.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Goku.fbx')">Copy Link</button>
-            </div>
-        </div>
-
-        <div class="model-card">
             <img loading="lazy" src="thumbnails/Thanos.jpg" alt="Thanos">
             <div class="model-name">Thanos</div>
             <div class="button-group">
                 <a href="characterModels/Thanos.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Thanos.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1YSNy6oy-EZaDh4-BXL2LAXhh44r0guEz/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -325,7 +235,8 @@
             <div class="model-name">Udin Din Din</div>
             <div class="button-group">
                 <a href="characterModels/Udin_Din_Din.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Udin_Din_Din.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/13Mg2rbnWKwYuUAfE61Pe4DxRjypEeil5/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -335,17 +246,8 @@
             <div class="model-name">Krrish</div>
             <div class="button-group">
                 <a href="characterModels/Krrish.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Krrish.fbx')">Copy Link</button>
-            </div>
-        </div>
-
-        <div class="model-card">
-            <img loading="lazy" src="thumbnails/Tung_Tung_Sahur.jpg" alt="Tung Tung Sahur">
-            <div class="model-name">Tung Tung Sahur</div>
-            <div class="button-group">
-                <a href="characterModels/Tung_Tung_Sahur.fbx" download><button
-                        class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Tung_Tung_Sahur.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1O9vXnLFkGk549oD_p8BPCINjyNQaA3IS/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -355,7 +257,9 @@
             <div class="model-name">Naruto</div>
             <div class="button-group">
                 <a href="characterModels/Naruto.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Naruto.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1tlXxe-saczPcn8Lt-PV6TiRMhh9Ym7DC/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -364,7 +268,9 @@
             <div class="model-name">Ms Dhoni</div>
             <div class="button-group">
                 <a href="characterModels/Ms_Dhoni.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Ms_Dhoni.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1G9Rjs9EoX-BwRMc1KNYi1cJSpyzzoaIK/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -373,7 +279,9 @@
             <div class="model-name">Virat Kohli</div>
             <div class="button-group">
                 <a href="characterModels/Virat_Kohli.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Virat_Kohli.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1fQeTE26os_hePMybq_mxdvMpkPUBaRdf/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -382,7 +290,9 @@
             <div class="model-name">Alien</div>
             <div class="button-group">
                 <a href="characterModels/Alien.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Alien.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1NVc06yqk_pzdkuL96vtUI_9HdgIlTiRN/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -391,7 +301,19 @@
             <div class="model-name">Army Officer</div>
             <div class="button-group">
                 <a href="characterModels/Army_Officer.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Army_Officer.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1HWl6mRlZ4_FDKONhyCH17FZTdJCquTdP/view?usp=sharing')">Copy
+                    Link</button>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img loading="lazy" src="thumbnails/Batman.jpg" alt="Batman">
+            <div class="model-name">Batman</div>
+            <div class="button-group">
+                <a href="characterModels/Batman.fbx" download><button class="download-btn">Download</button></a>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1DwncyypuErdXHV4vIoqjgGxErs0BumZi/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -401,7 +323,9 @@
             <div class="model-name">Ben 10</div>
             <div class="button-group">
                 <a href="characterModels/Ben_10.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Ben_10.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1QLq3IrRpjSG0gvll1rgmDiOSKraZIzDN/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -410,27 +334,31 @@
             <div class="model-name">BodyGuard</div>
             <div class="button-group">
                 <a href="characterModels/BodyGuard.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/BodyGuard.fbx')">Copy Link</button>
-            </div>
-        </div>
-
-        <div class="model-card">
-            <img loading="lazy" src="thumbnails/CaptainMarvel.jpg" alt="CaptainMarvel">
-            <div class="model-name">CaptainMarvel</div>
-            <div class="button-group">
-                <a href="characterModels/CaptainMarvel.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/CaptainMarvel.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1Rwtuz9Rj6MAUdrxQd9342LmkSRiGq7W0/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
 
         <div class="model-card">
-            <img loading="lazy" src="thumbnails/Captain_America.jpg" alt="Captain America">
+            <img loading="lazy" src="thumbnails/CaptainMarvel.jpg" alt="Captain America">
             <div class="model-name">Captain America</div>
             <div class="button-group">
                 <a href="characterModels/Captain_America.fbx" download><button
                         class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Captain_America.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/16P1M9XgTVuorBc4SvVPVjAy_3fo_iKqt/view?usp=sharing')">Copy
+                    Link</button>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img loading="lazy" src="thumbnails/CaptainMarvel.jpg" alt="CaptainMarvel">
+            <div class="model-name">Captain Marvel</div>
+            <div class="button-group">
+                <a href="characterModels/CaptainMarvel.fbx" download><button class="download-btn">Download</button></a>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1SeRwbDpLKp86v7s1zYNH7aQ7GECWn4-4/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -440,7 +368,9 @@
             <div class="model-name">CarryMinati</div>
             <div class="button-group">
                 <a href="characterModels/CarryMinati.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/CarryMinati.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1HPl_DrDKFPfFPeocXIokFDHZU7XHgztL/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -449,7 +379,9 @@
             <div class="model-name">Chingum</div>
             <div class="button-group">
                 <a href="characterModels/Chingum.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Chingum.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/10cRiHIkanLXf2mCH4Fw9v0Jyp5ZcZOPc/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -458,7 +390,9 @@
             <div class="model-name">DeadPool</div>
             <div class="button-group">
                 <a href="characterModels/DeadPool.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/DeadPool.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1QNfAbbtxoiwD2nuX6MhRiBkDgyZDmCtM/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -476,7 +410,9 @@
             <div class="model-name">Doraemon</div>
             <div class="button-group">
                 <a href="characterModels/Doraemon.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Doraemon.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1aeaTM2jn9TXwdMjgUqTmpktGIyW4hMYl/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -485,7 +421,9 @@
             <div class="model-name">Flash</div>
             <div class="button-group">
                 <a href="characterModels/Flash.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Flash.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1aQlvdcXuZoRuQOXh6iQ3N-B7BPe-Sf3b/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -495,7 +433,8 @@
             <div class="button-group">
                 <a href="characterModels/FreeFire_GreenCriminal.fbx" download><button
                         class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/FreeFire_GreenCriminal.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1Z-ywBZuAXAWzKWFHIAI9lYsHiMr6wIBX/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -506,7 +445,8 @@
             <div class="button-group">
                 <a href="characterModels/FreeFire_Raistar.fbx" download><button
                         class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/FreeFire_Raistar.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/10EWmKrDrapX31NsyUZDhmzxPTg4pUlf8/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -517,7 +457,8 @@
             <div class="button-group">
                 <a href="characterModels/FreeFire_RedCriminal.fbx" download><button
                         class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/FreeFire_RedCriminal.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1sknDIria0Vb5dyBN8z2Hyz1j2dJZQocT/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -527,7 +468,9 @@
             <div class="model-name">GodZilla</div>
             <div class="button-group">
                 <a href="characterModels/GodZilla.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/GodZilla.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/19CBEk8VrOuFufwmzc1kbSLfkQipDN7Uf/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -536,7 +479,53 @@
             <div class="model-name">Gojo</div>
             <div class="button-group">
                 <a href="characterModels/Gojo.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Gojo.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/10EWmKrDrapX31NsyUZDhmzxPTg4pUlf8/view?usp=sharing')">Copy
+                    Link</button>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img loading="lazy" src="thumbnails/Goku.jpg" alt="Goku">
+            <div class="model-name">Goku</div>
+            <div class="button-group">
+                <a href="characterModels/Goku.fbx" download><button class="download-btn">Download</button></a>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1rSyDwRyUCO9ENzIjHveazCOO0ktVwysA/view?usp=sharing')">Copy
+                    Link</button>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img loading="lazy" src="thumbnails/Granny.jpg" alt="Granny">
+            <div class="model-name">Granny</div>
+            <div class="button-group">
+                <a href="characterModels/Granny.fbx" download><button class="download-btn">Download</button></a>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1_Iqoz-Xoouxr6NcVARM3YOaFHReMU_lU/view?usp=sharing')">Copy
+                    Link</button>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img loading="lazy" src="thumbnails/Hulk.jpg" alt="Hulk">
+            <div class="model-name">Hulk</div>
+            <div class="button-group">
+                <a href="characterModels/Hulk.fbx" download><button class="download-btn">Download</button></a>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1Z5RqojPL4O_d3SikOMSGKmSilT04GtE6/view?usp=sharing')">Copy
+                    Link</button>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img loading="lazy" src="thumbnails/IronMan_New.jpg" alt="IronMan New">
+            <div class="model-name">IronMan New</div>
+            <div class="button-group">
+                <a href="characterModels/IronMan_New.fbx" download><button class="download-btn">Download</button></a>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1-JkbZ9ReGSdGvB4-oUOQSX3mASjR0jL1/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -545,7 +534,9 @@
             <div class="model-name">IronMan Old</div>
             <div class="button-group">
                 <a href="characterModels/IronMan_Old.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/IronMan_Old.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1ZFt38kjQ2MdPHAvNgby8lfhg_-SVsHWT/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -554,7 +545,9 @@
             <div class="model-name">Joker</div>
             <div class="button-group">
                 <a href="characterModels/Joker.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Joker.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1jatYVjcool8hDsf14yOYd__O4ZAA2cIq/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -563,7 +556,9 @@
             <div class="model-name">LavaTitan</div>
             <div class="button-group">
                 <a href="characterModels/LavaTitan.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/LavaTitan.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1Mi6ZWlRtfjb40ADESquuRSeSpNzz3VyH/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -572,7 +567,9 @@
             <div class="model-name">Zombie</div>
             <div class="button-group">
                 <a href="characterModels/Zombie.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Zombie.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/12XWObVVO4ViAOIL6yWjoweQPXjJKT9t4/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -581,7 +578,8 @@
             <div class="model-name">Michael Gta5</div>
             <div class="button-group">
                 <a href="characterModels/Michael_Gta5.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Michael_Gta5.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1musJQbKJsHD4GAG7_56j44A8-qbvsStu/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -591,7 +589,8 @@
             <div class="model-name">Franklin Gta5</div>
             <div class="button-group">
                 <a href="characterModels/Franklin_Gta5.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Franklin_Gta5.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1UdK1z8-9fWneTX9j7_-zyvGsCKkQj2i0/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -601,7 +600,9 @@
             <div class="model-name">Trevor Gta5</div>
             <div class="button-group">
                 <a href="characterModels/Trevor_Gta5.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Trevor_Gta5.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1OXb8e4kV5t6BDWIcccd0AdV6ivW8H-r-/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -610,7 +611,8 @@
             <div class="model-name">Motu MotuPatlu</div>
             <div class="button-group">
                 <a href="characterModels/Motu_MotuPatlu.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Motu_MotuPatlu.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1XJd7xNWFrpEKwa79b5S53zk0y1Eg79jj/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -620,7 +622,9 @@
             <div class="model-name">Nobita</div>
             <div class="button-group">
                 <a href="characterModels/Nobita.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Nobita.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/14ndmGAatxf5RmEdxy2WOetLeO8rNS9yt/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -629,7 +633,9 @@
             <div class="model-name">Oggy</div>
             <div class="button-group">
                 <a href="characterModels/Oggy.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Oggy.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1B56dYb_4Ap_qsGVHIcWPWEmPVXKBvTey/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -639,7 +645,8 @@
             <div class="button-group">
                 <a href="characterModels/Patlu_MotuPatlu.fbx" download><button
                         class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Patlu_MotuPatlu.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/11oUtvVMXnL3NXGXoXgnBpXvffybyIBXe/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -649,7 +656,9 @@
             <div class="model-name">PM Modi</div>
             <div class="button-group">
                 <a href="characterModels/PM_Modi.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/PM_Modi.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1FTmNR5V75Igs_kL0IVeRucGqDhxMVqPW/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -658,7 +667,9 @@
             <div class="model-name">Pushpa</div>
             <div class="button-group">
                 <a href="characterModels/Pushpa.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Pushpa.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1F97-g8pzSdtDO9ooMKhGGxnTEr3yBER6/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -667,7 +678,9 @@
             <div class="model-name">RedHulk</div>
             <div class="button-group">
                 <a href="characterModels/RedHulk.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/RedHulk.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1hTyfXldcZrnxTB4nA8bc0zf3-3xvtdrZ/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -676,7 +689,8 @@
             <div class="model-name">ScaryTeacher</div>
             <div class="button-group">
                 <a href="characterModels/ScaryTeacher.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/ScaryTeacher.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1Gyk7Zh3iZsBUQBDzzsv6dFTez4gJNiE1/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -686,7 +700,8 @@
             <div class="model-name">ShahrukhKhan</div>
             <div class="button-group">
                 <a href="characterModels/ShahrukhKhan.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/ShahrukhKhan.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1XrXEw_NYj9cg40eAVTwKJgyV2GKul6am/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -696,7 +711,9 @@
             <div class="model-name">Shinchan</div>
             <div class="button-group">
                 <a href="characterModels/Shinchan.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Shinchan.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/108O5uapU3tjxrXqfgVHAADM0rda69xxK/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -706,7 +723,19 @@
             <div class="button-group">
                 <a href="characterModels/SpiderMan_Black.fbx" download><button
                         class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/SpiderMan_Black.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1p4hbjS5aQRpMfjeNl5wYioNohW37UkUD/view?usp=sharing')">Copy
+                    Link</button>
+            </div>
+        </div>
+
+        <div class="model-card">
+            <img loading="lazy" src="thumbnails/SpiderMan_Red.jpg" alt="SpiderMan Red">
+            <div class="model-name">SpiderMan Red</div>
+            <div class="button-group">
+                <a href="characterModels/SpiderMan_Red.fbx" download><button class="download-btn">Download</button></a>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1yFzHldWv6ihTqz3xP_g9cHUNvLxe8Zp_/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -716,7 +745,8 @@
             <div class="model-name">SquidGame Doll</div>
             <div class="button-group">
                 <a href="characterModels/SquidGame_Doll.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/SquidGame_Doll.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1Nlo5Fgb1sDtKPFdPsjgPxdq0oum3mY-P/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -727,7 +757,8 @@
             <div class="button-group">
                 <a href="characterModels/SquidGame_Soldier.fbx" download><button
                         class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/SquidGame_Soldier.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/16b5vmkIXRR2hjOQmI6hxA0GunB5QW6w4/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -737,7 +768,8 @@
             <div class="model-name">TechnoGamerz</div>
             <div class="button-group">
                 <a href="characterModels/TechnoGamerz.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/TechnoGamerz.fbx')">Copy
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/1ZE2HCPaOSpZp85irhnomJfc7Y36jIxbN/view?usp=sharing')">Copy
                     Link</button>
             </div>
         </div>
@@ -747,7 +779,9 @@
             <div class="model-name">Thor</div>
             <div class="button-group">
                 <a href="characterModels/Thor.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/Thor.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/15Twxd4Vn_mVat6MlV5oqKpiTuODsXJK6/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -756,7 +790,9 @@
             <div class="model-name">TonyStark</div>
             <div class="button-group">
                 <a href="characterModels/TonyStark.fbx" download><button class="download-btn">Download</button></a>
-                <button class="copy-btn" onclick="copyToClipboard('characterModels/TonyStark.fbx')">Copy Link</button>
+                <button class="copy-btn"
+                    onclick="copyToClipboard('https://drive.google.com/file/d/19bdzyi8kHJ7n8gfXMLTPN1mDSkU7W0Ys/view?usp=sharing')">Copy
+                    Link</button>
             </div>
         </div>
 
@@ -765,8 +801,7 @@
     <script>
 
         function copyToClipboard(link) {
-            const fullUrl = window.location.origin + '/' + link;
-            navigator.clipboard.writeText(fullUrl)
+            navigator.clipboard.writeText(link)
                 .then(() => alert('Link copied to clipboard'))
                 .catch(() => alert('Failed to copy link.'));
         }
